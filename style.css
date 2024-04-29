@@ -1,36 +1,143 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
-html,
+/* Global styles */
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-body {
+  text-align: center;
+  font-family: "Inter", sans-serif; /* Use the Inter font with fallback to sans-serif */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right bottom, #873572, black);
+  justify-content: center; /* Center content horizontally */
 }
-a {
-  display: inline-block;
-  color: lightgrey;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
+
+/* Button container styles */
+.btn-container {
+  background-color: #f2f2f2;
+  height: 40px;
+  width: 66%; /* Set the width to 66% of the parent container */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  border-radius: 20px; /* Adjusted border-radius */
+  margin: auto; /* Center the container horizontally */
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+/* Button styles */
+button {
+  height: 40px;
+  width: 33%; /* Set the width to 33% of the parent container */
+  background-color: #f2f2f2;
+  border: none;
+  margin: auto;
+  border-radius: 20px;
+}
+
+/* Product card styles */
+.product-card {
+  width: 100%;
+  height: 480px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Product image styles */
+.product-card img {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 15px;
+}
+
+/* Badge styles */
+.badge {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Title and vendor styles */
+.title-vendor {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
 }
 
-a:hover {
-  background: rgba(0, 0, 0, 0.23);
+/* Product title styles */
+.product-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Price container styles */
+.price-container {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin: 5px;
+}
+
+/* Add to cart button styles */
+.add-to-cart {
+  margin-top: 25px;
+  width: 80%;
+  padding: 5px 10px;
+  background-color: black;
   color: white;
-  transform: scale(1.03);
-  text-decoration: none;
-}
-a:active {
-  transform: scale(0.98);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+.add-to-cart:hover {
+  background-color: rgb(78, 164, 175);
+}
+
+/* Compare price styles */
+.compare-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 15px;
+}
+
+/* Discount styles */
+.discount {
+  color: red;
+  margin-left: 15px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 767px) {
+  .product-card {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-card {
+    width: 38%;
+    margin-right: 2%;
+    float: left;
+  }
+}
+
+@media (min-width: 1025px) {
+  .product-card {
+    width: 20.33%;
+    margin-right: 1%;
+    float: left;
+  }
+}
