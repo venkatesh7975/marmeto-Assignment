@@ -42,8 +42,12 @@ fetch("https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json"
     .then(response => response.json())
     .then(data => {
         fetchedData = data.categories;
+        renderProducts("Men"); // Render products for Men initially
 
         // Event handlers for the buttons
+        men.style.backgroundColor = "#000";
+        men.style.color = "#fff";
+
         men.onclick = function () {
             men.textContent = "Men \u{1F468}"; // Unicode emoji for man
             women.textContent = "Women";
